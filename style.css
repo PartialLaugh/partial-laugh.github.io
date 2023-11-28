@@ -1,0 +1,344 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html{
+  background: url(./img/bg.jpg);
+}
+body{
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: #D6D8DB;
+  font-family: Product Sans;
+  backdrop-filter: blur(10px) brightness(0.5);
+}
+#items-container {
+  width: min-content;
+  margin-left: 4rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 0.5rem;
+}
+#day-of-week {
+  font-family: Anurati;
+  text-transform: uppercase;
+  font-size: 5.5em;
+  letter-spacing: 20px;
+  color: #fafafa;
+  margin-top: 4rem;
+  text-shadow: 12px 12px 25px #00000055;
+}
+#date {
+  font-size: 2.5em;
+  color: #f0f0f0;
+  font-family: Product Sans;
+}
+#time {
+  font-size: 5.5em;
+  color: #f0f0f0;
+  margin-top: auto;
+  margin: 0;
+  margin-bottom: 4rem;
+}
+.weather {
+  animation: slide 0.7s ease-in-out;
+  margin-top: auto;
+  background: linear-gradient(to left, #e3de9588, #5ec1f099);
+  width: min-content;
+  padding: 0.7em;
+  border-radius: 0.8em;
+  box-shadow: 2px 2px 24px -12px #8fcdd3;
+}
+.temp-button {
+  font-family: Product Sans;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  outline: none;
+}
+#temp-and-symbol {
+  display: flex;
+  align-items: center;
+}
+.temp {
+  color: #ffffff;
+  font-size: 2em;
+}
+@keyframes slide {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+#search-bar { /* define the DIV */
+  position: absolute;
+  left: 4rem;
+  top: 12rem;
+  display: flex;
+  margin-top: 2rem;
+  justify-content: space-between;
+  background-color: transparent;
+}
+.input-area { /* define the text area */
+  font-family: Product Sans;
+  font-size: 25px;
+  width: 350px;
+  height: 30px;
+  color: white;
+  background: white;
+  background-color:rgba(255, 255, 255, 0.387);
+  opacity: 0.7;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.input-button { /* define the button */
+  position: absolute;
+  top: 0;
+  left: 365px;
+  font-family: Product Sans;
+  font-size: 25px;
+  height: 32px;
+  color: white;
+  background:rgba(255, 255, 255, 0.387);
+  opacity: 0.7;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+#cards {
+  overflow: hidden;
+  border-radius: 10px 0 0 10px;
+  width: auto;
+  height: fit-content;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  gap: 0.4em;
+  padding: 0.4em;
+  font-family: 'LED Dot-Matrix';
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+#cards::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.045);
+  backdrop-filter: blur(10px);
+  border-radius: 10px 0 0 10px;
+  z-index: -1;
+}
+#cards > ul {
+  overflow: hidden;
+  width: 200px;
+  height: auto;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  z-index: 999;
+}
+#cards > ul > a {
+  font-size: 1em;
+  z-index: 99;
+  display: block;
+  cursor: pointer;
+  padding: 1em;
+  color: white;
+  text-decoration: none;
+  font-smooth: always;
+  text-shadow: 0 0 12px white;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.card:hover::before {
+  opacity: 1;
+}
+.card::before {
+  border-radius: inherit;
+  content: '';
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 200ms;
+  width: 100%;
+  z-index: -1;
+}
+.card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y),
+    rgba(255, 255, 255, 0.387),
+    transparent 40%
+  );
+  z-index: -1;
+}
+.card img {
+  height: 70px;
+}
+ul.card:nth-child(1):hover {
+  box-shadow: inset 0 0 0 1.6px red;
+}
+ul.card:nth-child(2):hover {
+  box-shadow: inset 0 0 0 1.6px purple;
+}
+ul.card:nth-child(3):hover {
+  box-shadow: inset 0 0 0 1.6px green;
+}
+ul.card:nth-child(4):hover {
+  box-shadow: inset 0 0 0 1.6px whitesmoke;
+}
+ul.card:nth-child(5):hover {
+  box-shadow: inset 0 0 0 1.6px #fdfdfd;
+}
+ul.card:nth-child(6):hover {
+  box-shadow: inset 0 0 0 1.6px #d1b3f8;
+}
+@media only screen and (min-height: 900px) {
+  #cards {
+    overflow: hidden;
+    border-radius: 10px 0 0 10px;
+    width: auto;
+    height: fit-content;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 0.4em;
+    padding: 0.4em;
+    font-family: 'LED Dot-Matrix';
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
