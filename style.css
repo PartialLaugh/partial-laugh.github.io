@@ -146,13 +146,13 @@ body{
   text-transform: uppercase;
   font-size: 5.5em;
   letter-spacing: 20px;
-  color: #fafafa;
+  color: #626262;
   margin-top: 4rem;
   text-shadow: 12px 12px 25px #00000055;
 }
 #date {
   font-size: 2.5em;
-  color: #f0f0f0;
+  color: #626262;
   font-family: Product Sans;
 }
 #time {
@@ -214,8 +214,8 @@ body{
   width: 350px;
   height: 30px;
   color: white;
-  background: white;
-  background-color:rgba(255, 255, 255, 0.387);
+  background: black;
+  background-color:black;
   opacity: 0.7;
   border-radius: 10px;
   border: none;
@@ -229,8 +229,7 @@ body{
   font-size: 25px;
   height: 32px;
   color: white;
-  background:rgba(255, 255, 255, 0.387);
-  opacity: 0.7;
+  background:#626262;
   border-radius: 10px;
   border: none;
   outline: none;
